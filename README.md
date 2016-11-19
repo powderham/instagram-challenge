@@ -1,3 +1,28 @@
+#User Stories
+
+```
+As a user,
+So I can show my friends the awesome food I eat,
+I want to be able to upload a photo.
+```
+
+```
+As a user,
+So I can validate my friend's existence,
+I want to be able to like a friend's photo.
+```
+
+```
+As a user,
+So I can have an outlet for my writing
+I want to be able to post a comment on a friend's photo.
+```
+
+
+
+
+
+
 Instagram Challenge
 ===================
 
