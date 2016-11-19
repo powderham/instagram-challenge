@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'main/home'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   root 'main#index'
 

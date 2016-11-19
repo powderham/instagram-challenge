@@ -1,0 +1,5 @@
+<% @posts.each do |post|  %>
+  <%= post.caption %><br>
+  <%= link_to 'Edit', edit_post_path(post), id: "edit_#{a.id}"%><br><br>
+  <%= link_to 'Destory', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end  %>
