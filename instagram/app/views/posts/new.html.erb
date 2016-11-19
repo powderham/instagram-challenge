@@ -1,9 +1,9 @@
 <h1>Hello Posts!</h1>
-<%= form_for :post do |p| %>
+<%= form_for :post, url: posts_path do |p| %>
 
 <p>
-  <%= p.label :post %><br>
-  <%= p.text_field :post %>
+  <%= p.label :caption %><br>
+  <%= p.text_field :caption %>
 </p>
 
 <p>
