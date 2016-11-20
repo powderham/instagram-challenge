@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Write Posts", type: :feature do
   scenario "Create test" do
+    sign_up
     visit '/posts/new'
     fill_in 'caption_text_field', with: "Test post"
     submit_form
