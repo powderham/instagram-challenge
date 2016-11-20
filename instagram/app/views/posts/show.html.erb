@@ -2,6 +2,9 @@
   <%= @post.caption %>
 </p>
 
+<p>
+  <%= image_tag @post.image.url(:thumb) %>
+</p>
 
 <h2>Comments:</h2>
 <%= render @post.comments %>

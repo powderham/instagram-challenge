@@ -5,7 +5,6 @@ RSpec.feature "Edit posts", type: :feature do
     sign_up
     write_post
     visit '/posts'
-    puts page.body
     find('a[id="edit_1"]').click
     fill_in 'caption_text_field', with: "Test post 2"
     submit_form

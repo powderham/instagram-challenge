@@ -1,4 +1,4 @@
-<%= form_for @post do |p| %>
+<%= form_for @post, html: {multipart: true} do |p| %>
 
 <% if @post.errors.any? %>
   <div id="error_explanation">
@@ -17,6 +17,11 @@
 <p>
   <%= p.label :caption %><br>
   <%= p.text_field :caption, id: 'caption_text_field' %>
+</p>
+
+<p>
+  <%= p.label :image %>
+  <%= p.file_field :image %>
 </p>
 
 <p>
