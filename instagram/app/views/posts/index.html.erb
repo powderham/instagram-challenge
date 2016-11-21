@@ -1,17 +1,19 @@
 <br>
 
 <h2>Posts</h2>
+
+<%= link_to 'New post', new_post_url %>
+
 <% @posts.each do |post|  %>
+<div id="post_<%=post.id%>">
   <%= post.caption %><br>
-  <%= image_tag post.image.url(:thumb) %>
-    <%= post.likes.each do |like| %>
-      <p>
-        <%= pluralize post.likes.count, 'like' %>
-      </p>
-    <% end %>
+  <%= image_tag post.image.url(:thumb) %> <br>
+  <%= pluralize post.likes.count, 'like' %>
+
   <br>
   <%= link_to 'Like', post_likes_url(post), method: :post, id: "like_#{post.id}" %> |
   <%= link_to 'Show', post_path(post) %> |
   <%= link_to 'Edit', edit_post_path(post), id: "edit_#{post.id}"%> |
-  <%= link_to 'Destroy', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+  <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+</div>
 <% end  %>

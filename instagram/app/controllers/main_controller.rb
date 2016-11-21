@@ -3,5 +3,6 @@ class MainController < ApplicationController
   end
 
   def index
+    redirect_to '/posts'
   end
 end
